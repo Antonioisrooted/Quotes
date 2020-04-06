@@ -1,0 +1,11 @@
+<div><h2>Words From The Council</h2>
+<ul class ="quotes">
+    <li *ngFor="let quote of quotes" 
+    [class.selected]="quote === selectedQuote"
+    (click)="onSelect(quote)"> 
+    <span class="badge">{{quote.id}}</span>
+    {{quote.name}}
+    </li>
+</ul>
+<app-quote-detail [quote]="selectedQuote"></app-quote-detail>
+</div>
